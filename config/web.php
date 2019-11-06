@@ -33,6 +33,12 @@ $config = [
             // for the mailer to send real emails.
             'useFileTransport' => true,
         ],
+        'redis' =>[
+            'class' => 'yii\redis\Connection',
+            'hostname' => '127.0.0.1',  //你的redis地址,windows建议使用127.0.0.1,否则会巨慢
+            'port' => 6379, //端口
+            'database' => 0,
+        ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
             'targets' => [
