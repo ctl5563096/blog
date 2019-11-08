@@ -30,4 +30,14 @@ class TestController extends Controller
 
 		$res->send();exit;
 	}
+
+	public function actionVer()
+    {
+        $app    = Yii::$app->wechat->getApp();
+        var_dump($app);die();
+        $server = $app->server;
+        $response = $server->serve();
+        $response->send();
+        exit();
+    }
 }
