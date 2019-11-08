@@ -28,6 +28,6 @@ class TestController extends Controller
 		#$res = $app->server->serve();
 		$ip = $app->base->getValidIps();
 
-//		$res->send();exit;
+		$res->send();exit;
 	}
 }
